@@ -110,6 +110,7 @@ public class SFSteps
 		util.general.tools.getElement(key,browser).sendKeys(util.general.ExcelUtility.getValue(sharedData.envConfigurationSheetInstance, key ,sharedData.autPosition));
 	}
 	
+	
 	@Then("^the user clicks on \"(.*?)\" Button in \"(.*?)\"\\.$")
 	public void the_user_clicks_on_Button_in(String key, String browserInstance ) throws Throwable
 	{
@@ -125,11 +126,72 @@ public class SFSteps
 		{
 		util.general.tools.getElement(key,browser).click();	
 		}catch(Exception e){
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 	}
 
 /* Start - Implemented by SL */
+	@Given("^the user only hovers on \"(.*?)\" to go to \"(.*?)\" in \"(.*?)\"\\.$")
+	public void the_user_hovers_on_to_go_to_in_browser(String hoverItem, String linkName , String browserInstance) throws Throwable {
+		
+		WebDriver browser = null;
+		if (browserInstance.trim().equalsIgnoreCase("Browser 2")) 
+			browser = sharedData.appInstance2;
+		if (browserInstance.trim().equalsIgnoreCase("Browser 1")) 
+			browser = sharedData.appInstance1;
+		if (browserInstance.trim().equalsIgnoreCase("Browser 3")) 
+			browser = sharedData.appInstance3;
+		try {
+			//new Actions( sharedData.appInstance ).moveToElement( util.general.tools.getElement(hoverItem, browser)).perform();
+		
+			//WebElement elem = browser.findElement(By.xpath("//img[contains(@src,'https://c.na78.content.force.com/profilephoto/005/T/1')]"));
+			WebElement elem = util.general.tools.getElement(hoverItem, browser);
+			((org.openqa.selenium.JavascriptExecutor) browser).executeScript("arguments[0].click();", elem);
+			Thread.sleep(5000);
+
+			Actions thisaction = new Actions(browser);
+			WebElement lnk = browser.findElement(By.linkText(linkName));
+			thisaction.moveToElement(lnk).click().build().perform();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			
+		}	
+	}
+
+	@Given("^the user does mouseover on \"(.*?)\" and switch frame  and click \"(.*?)\" in \"(.*?)\"\\.$")
+	public void the_user_does_mouseover_on_to_go_to_in_browser(String hoverItem, String key ,String browserInstance) throws Throwable {
+		
+		WebDriver browser = null;
+		if (browserInstance.trim().equalsIgnoreCase("Browser 2")) 
+			browser = sharedData.appInstance2;
+		if (browserInstance.trim().equalsIgnoreCase("Browser 1")) 
+			browser = sharedData.appInstance1;
+		if (browserInstance.trim().equalsIgnoreCase("Browser 3")) 
+			browser = sharedData.appInstance3;
+		try {
+			
+			Actions thisaction = new Actions(browser);
+			WebElement elem = util.general.tools.getElement(hoverItem, browser);
+			// This does the mouse over
+			thisaction.moveToElement(elem);
+			
+			// Now switch to the frame
+			
+			util.general.tools.switchFrame(browser);
+			WebElement thiselem = util.general.tools.getElement(key, browser);
+			((org.openqa.selenium.JavascriptExecutor) browser).executeScript("arguments[0].click();", thiselem);
+			Thread.sleep(5000);
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			
+		}	
+	}
+
+	
 	@Then("^the user selects \"(.*?)\" value from \"(.*?)\" drop down in \"(.*?)\"\\.$")
 	public void the_user_selects_value_from_drop_down_in(String dropDownValue, String dropDownKey, String browserInstance) throws Throwable {
 		
@@ -148,7 +210,7 @@ public class SFSteps
 			
 			sl.selectByVisibleText( dropDownValue );
 		}catch (Exception e){
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 	}
 	
@@ -158,7 +220,7 @@ public class SFSteps
 		try {
 			new Actions( sharedData.appInstance ).moveToElement( util.general.tools.getElement(hoverItem)).perform();
 		} catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 	}
 	
@@ -178,9 +240,29 @@ public class SFSteps
 		{
 		util.general.tools.switchDynamicAndGetElement(key,browser).click();	
 		}catch(Exception e){
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 	}
+	
+	@Then("^the user does \"(.*?)\" frame switch and clicks on \"(.*?)\" Button in \"(.*?)\"\\.$")
+	public void the_user_does_frame_switch_and_clicks_on_Button_in(String frameKey, String key, String browserInstance ) throws Throwable
+	{
+		WebDriver browser = null;
+		if (browserInstance.trim().equalsIgnoreCase("Browser 2")) 
+			browser = sharedData.appInstance2;
+		if (browserInstance.trim().equalsIgnoreCase("Browser 1")) 
+			browser = sharedData.appInstance1;
+		if (browserInstance.trim().equalsIgnoreCase("Browser 3")) 
+			browser = sharedData.appInstance3;
+
+		try
+		{
+		util.general.tools.switchDynamicAndGetElement(frameKey, key,browser).click();	
+		}catch(Exception e){
+			//e.printStackTrace();
+		}
+	}
+	
 	@Then("^the user switch to frame in \"(.*?)\"\\.$")
 	public void the_user_to_frame_in(String browserInstance ) throws Throwable
 	{
@@ -197,7 +279,7 @@ public class SFSteps
 		
 		util.general.tools.switchFrame(browser);	
 		}catch(Exception e){
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 	}
 	
@@ -217,7 +299,7 @@ public class SFSteps
 		
 		util.general.tools.close(browser);	
 		}catch(Exception e){
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 	}
 	
@@ -317,4 +399,30 @@ public class SFSteps
 	
 	}
 
+	@Then("^the user switches with text \"(.*?)\" from \"(.*?)\" to \"(.*?)\"\\.$")
+	public void the_user_switches_with_text_from_to( String windowTitle, String firstBrowser, String secondBrowser) throws Throwable
+	{
+		WebDriver browser = null;
+		if (firstBrowser.trim().equalsIgnoreCase("Browser 2")) 
+			browser = sharedData.appInstance2;
+		if (firstBrowser.trim().equalsIgnoreCase("Browser 1")) 
+			browser = sharedData.appInstance1;
+		if (firstBrowser.trim().equalsIgnoreCase("Browser 3")) 
+			browser = sharedData.appInstance3;
+		
+		Set handles = browser.getWindowHandles();		 
+        System.out.println(handles);
+         for (String handle1 : browser.getWindowHandles()) 
+         {
+        	System.out.println(handle1);
+        	browser.switchTo().window(handle1);
+        	if (browser.getTitle().contains(windowTitle)) {
+        		sharedData.appInstance3 = browser;
+				break;
+			}
+
+         }
+	
+	}
+	
 }

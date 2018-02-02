@@ -64,7 +64,7 @@ public class tools {
 			return util.general.tools.pointTheElement(identifierType, identifierValue,browser);
 		} catch (Exception e) {
 			System.out.println("I am here");
-			e.printStackTrace();
+			//e.printStackTrace();
 			return null;
 		}
 	}
@@ -94,7 +94,7 @@ public class tools {
 			return util.general.tools.pointTheElement(identifierType, identifierValue,browser);
 		} catch (Exception e) {
 			System.out.println("I am here");
-			e.printStackTrace();
+			//e.printStackTrace();
 			return null;
 		}
 	}
@@ -121,10 +121,39 @@ public class tools {
 			return util.general.tools.pointTheElement(identifierType, identifierValue,browser);
 		} catch (Exception e) {
 			System.out.println("I am here");
-			e.printStackTrace();
+			//e.printStackTrace();
 			return null;
 		}
 	}	
+/* Added by SL */
+	public static WebElement switchDynamicAndGetElement ( String framekey, String key ,WebDriver browser)
+	{
+		String identifierType = null;
+		String identifierValue = null;
+		WebElement element = null;
+		String value = null;
+		try {
+			// 1. First switch to the Dynamically generated frame 
+			WebElement elem = getElement(framekey,browser );
+			
+
+			browser.switchTo().frame(elem);
+	
+			
+			// 2. Then go to find the element
+			identifierType = util.general.ExcelUtility.getValue(sharedData.pomSheetInstance, key ,sharedData.appIdentifierTypePosition);
+			identifierValue = util.general.ExcelUtility.getValue(sharedData.pomSheetInstance, key ,sharedData.appIdentifierValuePosition);
+			System.out.println("identifierType : " + identifierType);
+			System.out.println("identifierValue : " + identifierValue);
+			return util.general.tools.pointTheElement(identifierType, identifierValue,browser);
+		} catch (Exception e) {
+			System.out.println("I am here");
+			//e.printStackTrace();
+			return null;
+		}
+	}	
+
+/* Added by SL */	
 	
 	public static void switchFrame( WebDriver browser)
 	{
@@ -143,7 +172,7 @@ public class tools {
 
 		} catch (Exception e) {
 			System.out.println("I am in switch frame");
-			e.printStackTrace();
+			//e.printStackTrace();
 		
 		}
 	}	
@@ -153,7 +182,7 @@ public class tools {
 		try{
 			browser.close();
 		}catch( Exception e){
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		
 	}
@@ -176,7 +205,7 @@ public class tools {
 			if (identifierType.equalsIgnoreCase("Class"))
 				return browser.findElement(By.className(identifierValue));
 		} catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 			// TODO: handle exception
 		}
 		return null;

@@ -87,7 +87,7 @@ public class elementOperation {
 			
 			sl.selectByVisibleText( dropDownValue );
 		}catch (Exception e){
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 	}
 	@Then("^The user selects \"(.*?)\" option from from \"(.*?)\" drop down\\.$")

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Automation Suite" allow-return-values="true" verbose="1" parallel="tests" thread-count="2">
-    <test name="Login Test cases 01" parallel="classes" thread-count="2">
-	<parameter name="features" value="Features" />
+<suite name="Automation Suite" allow-return-values="true" verbose="1" parallel="tests" thread-count="2"> 
+<test name="Salesforce Landing Page Menu" parallel="classes" thread-count="2"> 
+ 	<parameter name="features" value="Features" />
 	<parameter name="glue" value="stepDef" />
-	<parameter name="tags" value="@SFCreateUser"/>
+	<parameter name="tags" value="@SFCreateAccount"/>
 		<classes>
 			<class name="Runner.RunTest" />
 		</classes>
