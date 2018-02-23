@@ -349,6 +349,54 @@ public class SFSteps
 	
 	
 	/* End implemented by SL */
+	
+	
+	/* Start Implemented by SL */
+
+	 
+
+	@Then("^the user clicks on \"(.*?)\" in alert in \"(.*?)\"\\.$")
+	public void the_user_clicks_in_alert(String alertButton, String browserInstance) throws Throwable 
+
+	            {
+
+	                        WebDriver browser = null;
+
+	                        if (browserInstance.trim().equalsIgnoreCase("Browser 2")) 
+
+	                                    browser = sharedData.appInstance2;
+
+	                        if (browserInstance.trim().equalsIgnoreCase("Browser 1")) 
+
+	                                    browser = sharedData.appInstance1;
+
+	                        if (browserInstance.trim().equalsIgnoreCase("Browser 3")) 
+	 browser = sharedData.appInstance3;
+
+	            
+
+	                        if (alertButton.trim().equalsIgnoreCase("OK")) 
+
+	                        {
+
+	                           browser.switchTo().alert().accept();
+
+	                        }
+
+	                        
+
+	                        if (alertButton.trim().equalsIgnoreCase("CANCEL")) 
+
+	                        {
+
+	                           browser.switchTo().alert().dismiss();
+
+	                        }
+	  }
+
+	/* End Implemented by SL */   
+	
+	
 	@Then("^the user clicks on \"(.*?)\" link by searching for \"(.*?)\"\\.$")
 	public void the_user_clicks_on_link_by_searching_for(String linkName, String browserInstance) throws Throwable {
 		List<WebElement> element = new ArrayList<WebElement>();
