@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/highcharts.js"></script>
+<script type="text/javascript" src="js/highcharts-3d.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Html Reports  - Tag: @SFDeleteOpportunity</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation" ><a href="step-overview.html">Steps</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>The K2 Project</td>
+                          <td>K2 Dev Build</td>
+                        <td>23 Feb 2018, 22:53</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Tag Report</h2>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        <thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="7">Steps</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Tag</th>
+        <th>Total</th>
+    <th>Passed</th>
+    <th>Failed</th>
+    <th>Total</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="missing">Missing</th>
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+        <tbody>
+        <tr>
+          <td class="tagname">@SFDeleteOpportunity</td>
+          <td>1</td>
+          <td>1</td>
+          <td>0</td>
+          <td>59</td>
+          <td>59</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="duration" data-value="501055774653">8m 21s 055 ms</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="elements">
+        
+  <div class="element">
+          <div class="indention">
+        <a href="SFRecordDelete-feature.html">View Feature</a> <i>Deleting records from SF</i>
+      </div>
+    
+    
+<div class="tags indention">
+       <a href="SFDeleteOpportunity.html">@SFDeleteOpportunity</a>
+  </div>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element--1012529525">
+      
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Delete an existing Opportunity in sales force</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </span>
+    <div class="description indention"></div>
+
+    <div id="element--1012529525" class="collapse collapsable-details ">
+      
+  <div class="inner-level hooks-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-1550080835">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-1550080835" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">stepDefinitions.setUp(Scenario)</span>
+                        
+  <span class="lead-duration duration">311 ms</span>
+
+          </div>
+
+                      
+
+                  </div>
+          </div>
+  </div>
+
+
+      <div class="steps inner-level">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-62915435">
+          
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+        </div>
+
+        <div id="steps-62915435" class="inner-level collapse collapsable-details ">
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user Opened the AUT.</span>
+  
+  <span class="lead-duration duration">1m 49s 932 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg--1117447528">
+          <a>Output</a>
+      </div>
+      <div id="msg--1117447528" class="collapse collapsable-details">
+        <pre><a href="C:\$$SL-Work\MyProject\AutomationProject\Reports\GeneratdScreenShots\Sandbox\2018-02-23\Sandbox_2018-02-23_1519406216926.jpg" target="_blank">ScreenShot</a> </pre>
+      </div>
+    </div>
+  </div>
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">The user Opened the "Guerrilla Mail" .</span>
+  
+  <span class="lead-duration duration">1m 20s 874 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user enters "User Name" in "Browser 1".</span>
+  
+  <span class="lead-duration duration">1s 087 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user enters "Password" in "Browser 1".</span>
+  
+  <span class="lead-duration duration">914 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user clicks on "Submit" Button in "Browser 1".</span>
+  
+  <span class="lead-duration duration">11s 740 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user switches from "Browser 1" to "Browser 2".</span>
+  
+  <span class="lead-duration duration">429 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">4s 999 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user clicks on "EmailEdit" Button in "Browser 2".</span>
+  
+  <span class="lead-duration duration">348 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user enters "Email" in "Browser 2".</span>
+  
+  <span class="lead-duration duration">469 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user clicks on "Set" Button in "Browser 2".</span>
+  
+  <span class="lead-duration duration">170 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s 002 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">4s 999 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">4s 999 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user clicks on "Verify your identity in Salesforce" link by searching "Browser 2".</span>
+  
+  <span class="lead-duration duration">591 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">4s 999 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">4s 999 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">4s 999 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user retrieves "Verification Code:" in "e-Mail-content" from "Browser 2".</span>
+  
+  <span class="lead-duration duration">078 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user switches from "Browser 2" to "Browser 1".</span>
+  
+  <span class="lead-duration duration">092 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">user enters "verification-code" from "temp data" in "Browser 1".</span>
+  
+  <span class="lead-duration duration">171 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user clicks on "verify" Button in "Browser 1".</span>
+  
+  <span class="lead-duration duration">6s 233 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">4s 999 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user clicks on "Remind Me Later" link in "Browser 1".</span>
+  
+  <span class="lead-duration duration">15s 454 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">4s 999 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s 004 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">4s 999 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">4s 999 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s 006 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user only hovers on "userimage" to go to "Switch to Salesforce Classic" in "Browser 1".</span>
+  
+  <span class="lead-duration duration">52s 404 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">4s 999 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user clicks on "alltab" Button in "Browser 1".</span>
+  
+  <span class="lead-duration duration">16s 447 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">4s 999 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">4s 999 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user clicks on "App Launcher" link in "Browser 1".</span>
+  
+  <span class="lead-duration duration">8s 381 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user clicks on "SFMarketing" Button in "Browser 1".</span>
+  
+  <span class="lead-duration duration">3s 199 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user clicks on "closepopup" Button in "Browser 1".</span>
+  
+  <span class="lead-duration duration">124 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user clicks on "Opportunities" Button in "Browser 1".</span>
+  
+  <span class="lead-duration duration">6s 099 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user clicks on "OppName" link in "Browser 1".</span>
+  
+  <span class="lead-duration duration">6s 616 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user clicks on "OppDelete" Button in "Browser 1".</span>
+  
+  <span class="lead-duration duration">618 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user clicks on "OK" in alert in "Browser 1".</span>
+  
+  <span class="lead-duration duration">075 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">4s 999 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user only hovers on "UserNavMenuButton" to go to "Switch to Lightning Experience" in "Browser 1".</span>
+  
+  <span class="lead-duration duration">10s 011 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">5s</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user waits for the page to load.</span>
+  
+  <span class="lead-duration duration">4s 999 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                      <div class="step">
+              
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the user only hovers on "userimage" to go to "Log Out" in "Browser 1".</span>
+  
+  <span class="lead-duration duration">3s 474 ms</span>
+
+  </div>
+
+              
+
+
+              
+              
+
+              
+
+            </div>
+                  </div>
+      </div>
+
+      
+  <div class="inner-level hooks-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-1122118227">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-1122118227" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">stepDefinitions.tearDown(Scenario)</span>
+                        
+  <span class="lead-duration duration">000 ms</span>
+
+          </div>
+
+                      
+
+                  </div>
+          </div>
+  </div>
+
+    </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+      <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+      <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Cucumber-JVM Reports</a>
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
